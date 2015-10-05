@@ -11,12 +11,12 @@ pthread_mutex_t lock;
 void *thr_func(void *arg){
 
 	
-	/* pthread_mutex_lock(&lock); */
 	for ( int i =0; i< 10000; ++i) {
+	/* pthread_mutex_lock(&lock); */
 		g_value = g_value + 1; 
+	/* pthread_mutex_unlock(&lock); */
 	} 
 	printf("HI :%d\n",g_value);
-	/* pthread_mutex_unlock(&lock); */
 	pthread_exit(NULL);
 }
 
